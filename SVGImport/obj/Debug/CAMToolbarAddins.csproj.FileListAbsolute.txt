@@ -1,0 +1,5 @@
+C:\Temp\Lixo\CamBam\CamBam\bin\Debug\plugins\CAMToolbarAddins.dll
+C:\Temp\Lixo\CamBam\CamBam\bin\Debug\plugins\CAMToolbarAddins.pdb
+C:\Temp\Lixo\CamBam\CAMToolbarAddins\obj\Debug\CAMToolbarAddins.csprojResolveAssemblyReference.cache
+C:\Temp\Lixo\CamBam\CAMToolbarAddins\obj\Debug\CAMToolbarAddins.dll
+C:\Temp\Lixo\CamBam\CAMToolbarAddins\obj\Debug\CAMToolbarAddins.pdb

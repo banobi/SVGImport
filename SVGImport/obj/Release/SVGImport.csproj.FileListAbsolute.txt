@@ -1,0 +1,14 @@
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\bin\Release\SVGImport.dll
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\bin\Release\SVGImport.pdb
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\bin\Release\CamBam.CAD.dll
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\bin\Release\CamBam.Geom.dll
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\obj\Release\SVGImport.dll
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\obj\Release\SVGImport.pdb
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\obj\Release\SVGImport.csprojResolveAssemblyReference.cache
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImport\bin\Release\SVGImport.dll
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImport\bin\Release\SVGImport.pdb
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImport\obj\Release\SVGImport.ImportSVG.resources
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImport\obj\Release\SVGImport.csproj.GenerateResource.Cache
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImport\obj\Release\SVGImport.dll
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImport\obj\Release\SVGImport.pdb
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImport\obj\Release\SVGImport.csprojResolveAssemblyReference.cache

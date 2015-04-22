@@ -1,0 +1,12 @@
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\bin\Release\SVGImportTest2.exe.config
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\bin\Release\SVGImportTest2.exe
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\bin\Release\SVGImportTest2.pdb
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\bin\Release\SVGImport.dll
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\bin\Release\CamBam.CAD.dll
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\bin\Release\CamBam.Geom.dll
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\bin\Release\SVGImport.pdb
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\obj\Release\SVGImportTest2.csprojResolveAssemblyReference.cache
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\obj\Release\SVGImportTest2.Properties.Resources.resources
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\obj\Release\SVGImportTest2.csproj.GenerateResource.Cache
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\obj\Release\SVGImportTest2.exe
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\SVGImportTest2\obj\Release\SVGImportTest2.pdb

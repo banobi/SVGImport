@@ -1,0 +1,5 @@
+C:\Temp\Lixo\CamBam\My Plugins\CamBam\bin\Debug\plugins\SVGImport.dll
+C:\Temp\Lixo\CamBam\My Plugins\CamBam\bin\Debug\plugins\SVGImport.pdb
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\obj\Debug\SVGImport.csprojResolveAssemblyReference.cache
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\obj\Debug\SVGImport.dll
+C:\Temp\Lixo\CamBam\My Plugins\SVGImport\obj\Debug\SVGImport.pdb

@@ -1,0 +1,5 @@
+C:\Temp\Lixo\CamBam\MouseDetection\obj\Debug\MouseDetection.csprojResolveAssemblyReference.cache
+C:\Temp\Lixo\CamBam\CamBam\bin\Debug\plugins\MouseDetection.dll
+C:\Temp\Lixo\CamBam\CamBam\bin\Debug\plugins\MouseDetection.pdb
+C:\Temp\Lixo\CamBam\MouseDetection\obj\Debug\MouseDetection.dll
+C:\Temp\Lixo\CamBam\MouseDetection\obj\Debug\MouseDetection.pdb

@@ -1,0 +1,6 @@
+C:\Temp\Lixo\CamBam\MouseDetection\obj\Release\MouseDetection.dll
+C:\Temp\Lixo\CamBam\MouseDetection\obj\Release\MouseDetection.pdb
+C:\Temp\Lixo\CamBam\MouseDetection\bin\Release\MouseDetection.dll
+C:\Temp\Lixo\CamBam\MouseDetection\bin\Release\MouseDetection.pdb
+C:\Temp\Lixo\CamBam\MouseDetection\bin\Release\CamBam.CAD.dll
+C:\Temp\Lixo\CamBam\MouseDetection\bin\Release\CamBam.Geom.dll
