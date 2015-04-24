@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 
-namespace SVGImport.SVG
+namespace SVGImport.SVG.Elements
 {
-    public class Rect
+    public class Rect : SVGElement
     {
         public double X { get; set; }
         public double Y { get; set; }
@@ -20,16 +20,20 @@ namespace SVGImport.SVG
         public double Width { get; set; }
         public double Height { get; set; }
 
-        public Rect(XElement rect)
+        public Rect()
         {
-            XAttribute rx = rect.Attribute("rx");
-            XAttribute ry = rect.Attribute("ry");
+        }
 
-            this.X = Convert.ToDouble(rect.Attribute("x").Value, SVGFile.Provider);
-            this.Y = Convert.ToDouble(rect.Attribute("y").Value, SVGFile.Provider);
+        public override void Process(XElement element)
+        {
+            XAttribute rx = element.Attribute("rx");
+            XAttribute ry = element.Attribute("ry");
 
-            this.Width = Convert.ToDouble(rect.Attribute("width").Value, SVGFile.Provider);
-            this.Height = Convert.ToDouble(rect.Attribute("height").Value, SVGFile.Provider);
+            this.X = Convert.ToDouble(element.Attribute("x").Value, SVGFile.Provider);
+            this.Y = Convert.ToDouble(element.Attribute("y").Value, SVGFile.Provider);
+
+            this.Width = Convert.ToDouble(element.Attribute("width").Value, SVGFile.Provider);
+            this.Height = Convert.ToDouble(element.Attribute("height").Value, SVGFile.Provider);
 
             if (rx != null)
             {
@@ -41,7 +45,7 @@ namespace SVGImport.SVG
             }
         }
 
-        public void Draw()
+        public override void Draw()
         {
             Point3F point = new Point3F(this.X, this.Y, 0);
 

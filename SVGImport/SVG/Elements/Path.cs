@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 
-namespace SVGImport.SVG
+namespace SVGImport.SVG.Elements
 {
     public enum PointType
     {
@@ -15,24 +15,28 @@ namespace SVGImport.SVG
         L
     };
 
-    public class Path
+    public class Path : SVGElement
     {
         public string PathData { get; set; }
         public List<PathPoint> Points { get; set; }
         public bool Closed { get; set; }
 
-        public Path(XElement rect)
+        public Path()
         {
-            this.PathData = rect.Attribute("d").Value;
+        }
+
+        public override void Process(XElement element)
+        {
+            this.PathData = element.Attribute("d").Value;
             this.Points = new List<PathPoint>();
             this.Closed = false;
 
             string[] path = this.PathData.Split(' ');
             PointType pointType = PointType.M;
 
-            foreach (string element in path)
+            foreach (string point in path)
             {
-                switch (element)
+                switch (point)
                 {
                     case "M":
                         pointType = PointType.M;
@@ -46,7 +50,7 @@ namespace SVGImport.SVG
 
                         break;
                     default:
-                        string elem = element;
+                        string elem = point;
 
                         if (elem.StartsWith("M"))
                         {
@@ -67,13 +71,13 @@ namespace SVGImport.SVG
                             double x = Convert.ToDouble(xAndY[0], SVGFile.Provider);
                             double y = Convert.ToDouble(xAndY[1], SVGFile.Provider);
 
-                            PathPoint point = new PathPoint();
+                            PathPoint pathPoint = new PathPoint();
 
-                            point.P = new Point3F(x, y, 0);
+                            pathPoint.P = new Point3F(x, y, 0);
 
-                            point.PType = pointType;
+                            pathPoint.PType = pointType;
 
-                            this.Points.Add(point);
+                            this.Points.Add(pathPoint);
                         }
 
                         break;
@@ -81,7 +85,7 @@ namespace SVGImport.SVG
             }
         }
 
-        public void Draw()
+        public override void Draw()
         {
             Polyline poly = new Polyline();
 
@@ -100,6 +104,8 @@ namespace SVGImport.SVG
             }
 
             poly.Closed = this.Closed;
+
+            ThisApplication.AddLogMessage(3, string.Format("Add new path (Number of points={0}, Closed={1})", this.Points.Count, this.Closed));
 
             CamBam.UI.CamBamUI.MainUI.InsertEntity(poly);
         }

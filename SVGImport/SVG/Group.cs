@@ -12,10 +12,7 @@ namespace SVGImport.SVG
     public class Group
     {
         public string Name { get; set; }
-        public List<Line> Lines { get; set; }
-        public List<Rect> Rects { get; set; }
-        public List<Circle> Circles { get; set; }
-        public List<Path> Paths { get; set; }
+        public List<SVGElement> Elements { get; set; }
 
         public Group(XElement group)
         {
@@ -26,38 +23,55 @@ namespace SVGImport.SVG
                 this.Name = id.Value;
             }
 
-            this.Lines = new List<Line>();
-            this.Rects = new List<Rect>();
-            this.Circles = new List<Circle>();
-            this.Paths = new List<Path>();
+            this.Elements = new List<SVGElement>();
 
-            List<XElement> lines = new List<XElement>();
-            List<XElement> rects = new List<XElement>();
-            List<XElement> circles = new List<XElement>();
-            List<XElement> paths = new List<XElement>();
+            List<XElement> elements = new List<XElement>();
 
-            lines = group.Descendants("{http://www.w3.org/2000/svg}line").ToList();
-            if (lines != null && lines.Count > 0)
+            elements = group.Descendants("{http://www.w3.org/2000/svg}line").ToList();
+            if (elements != null && elements.Count > 0)
             {
-                lines.ForEach(l => this.Lines.Add(new SVG.Line(l)));
+                elements.ForEach(e =>
+                {
+                    SVGElement element = new SVG.Elements.Line();
+                    element.Process(e);
+                    this.Elements.Add(element);
+                });
             }
 
-            rects = group.Descendants("{http://www.w3.org/2000/svg}rect").ToList();
-            if (rects != null && rects.Count > 0)
+            elements.Clear();
+            elements = group.Descendants("{http://www.w3.org/2000/svg}rect").ToList();
+            if (elements != null && elements.Count > 0)
             {
-                rects.ForEach(r => this.Rects.Add(new Rect(r)));
+                elements.ForEach(e =>
+                {
+                    SVGElement element = new SVG.Elements.Rect();
+                    element.Process(e);
+                    this.Elements.Add(element);
+                });
             }
 
-            circles = group.Descendants("{http://www.w3.org/2000/svg}circle").ToList();
-            if (circles != null && circles.Count > 0)
+            elements.Clear();
+            elements = group.Descendants("{http://www.w3.org/2000/svg}circle").ToList();
+            if (elements != null && elements.Count > 0)
             {
-                circles.ForEach(c => this.Circles.Add(new Circle(c)));
+                elements.ForEach(e =>
+                {
+                    SVGElement element = new SVG.Elements.Circle();
+                    element.Process(e);
+                    this.Elements.Add(element);
+                });
             }
 
-            paths = group.Descendants("{http://www.w3.org/2000/svg}path").ToList();
-            if (paths != null && paths.Count > 0)
+            elements.Clear();
+            elements = group.Descendants("{http://www.w3.org/2000/svg}path").ToList();
+            if (elements != null && elements.Count > 0)
             {
-                paths.ForEach(p => this.Paths.Add(new Path(p)));
+                elements.ForEach(e =>
+                {
+                    SVGElement element = new SVG.Elements.Path();
+                    element.Process(e);
+                    this.Elements.Add(element);
+                });
             }
         }
 
@@ -71,10 +85,7 @@ namespace SVGImport.SVG
             }
             CamBam.UI.CamBamUI.MainUI.ActiveView.CADFile.SetActiveLayer(this.Name);
             
-            this.Lines.ForEach(l => l.Draw());
-            this.Rects.ForEach(r => r.Draw());
-            this.Circles.ForEach(c => c.Draw());
-            this.Paths.ForEach(p => p.Draw());
+            this.Elements.ForEach(l => l.Draw());
 
             ThisApplication.AddLogMessage(4, "<< Draw");
         }

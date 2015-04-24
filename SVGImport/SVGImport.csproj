@@ -72,11 +72,12 @@
     <Compile Include="ImportSVG.Designer.cs">
       <DependentUpon>ImportSVG.cs</DependentUpon>
     </Compile>
-    <Compile Include="SVG\Circle.cs" />
+    <Compile Include="SVG\Elements\Circle.cs" />
     <Compile Include="SVG\Group.cs" />
-    <Compile Include="SVG\Line.cs" />
-    <Compile Include="SVG\Path.cs" />
-    <Compile Include="SVG\Rect.cs" />
+    <Compile Include="SVG\SVGElement.cs" />
+    <Compile Include="SVG\Elements\Line.cs" />
+    <Compile Include="SVG\Elements\Path.cs" />
+    <Compile Include="SVG\Elements\Rect.cs" />
     <Compile Include="SVG\SVGFile.cs" />
     <Compile Include="SVGImport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,24 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 
-namespace SVGImport.SVG
+namespace SVGImport.SVG.Elements
 {
-    public class Circle
+    public class Circle : SVGElement
     {
         public double CenterX { get; set; }
         public double CenterY { get; set; }
 
         public double Radius { get; set; }
 
-        public Circle(XElement rect)
+        public Circle()
         {
-            this.CenterX = Convert.ToDouble(rect.Attribute("cx").Value, SVGFile.Provider);
-            this.CenterY = Convert.ToDouble(rect.Attribute("cy").Value, SVGFile.Provider);
-
-            this.Radius = Convert.ToDouble(rect.Attribute("r").Value, SVGFile.Provider);
         }
 
-        public void Draw()
+        public override void Process(XElement element)
+        {
+            this.CenterX = Convert.ToDouble(element.Attribute("cx").Value, SVGFile.Provider);
+            this.CenterY = Convert.ToDouble(element.Attribute("cy").Value, SVGFile.Provider);
+
+            this.Radius = Convert.ToDouble(element.Attribute("r").Value, SVGFile.Provider);
+        }
+
+        public override void Draw()
         {
             Point2F point = new Point2F(this.CenterX, this.CenterY);
 
